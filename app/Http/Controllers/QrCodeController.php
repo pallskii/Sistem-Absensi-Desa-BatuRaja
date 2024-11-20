@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Kehadiran;
 use App\Models\Qrcodes;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
@@ -49,9 +50,15 @@ class QrCodeController extends Controller
             'code' => 'required',
         ]);
 
+
         $qrcode = Qrcodes::where('code', $request->code)->first();
         if($qrcode && $qrcode->valid_date != now()->toDateString()){
             return redirect()->route('qrcode.scanner')->with('error', 'QR Code tidak valid');
+        }
+
+        $kehadiran = Kehadiran::where('qrcode_id', $qrcode->id)->where('user_id', Auth::user()->id)->first();
+        if($kehadiran){
+            return redirect()->route('beranda')->with('error', 'Kehadiran sudah tercatat');
         }
         
         if($qrcode){

@@ -8,6 +8,7 @@
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen h-screen">
 
+  
   <!-- Header -->
   <header class="bg-gray-800 shadow">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -19,6 +20,16 @@
       </nav>
     </div>
   </header>
+
+  @if(Session::has('success'))
+    <p class="text-2xl font-bold text-center mb-8 text-green-400">{{ Session::get('message') }}</p>
+  @endif  
+  
+
+  @if(Session::has('error'))
+    <p class="text-2xl font-bold text-center mb-8 text-red-400">{{ Session::get('message') }}</p>
+  @endif
+
 
   <!-- Tabel Kehadiran -->
   <main class="container mx-auto px-6 py-10">
