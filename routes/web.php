@@ -11,7 +11,8 @@ Route::post('/login', [AuthController::class, 'loginAction'])
 ->name('login.action');
 
 Route::middleware(['checkLogin'])->group(function () {
-    Route::get('/', [BerandaController::class, 'index'])->name('beranda');
+    Route::get('/', [BerandaController::class, 'beranda'])->name('beranda');
+    Route::get('/presensi', [BerandaController::class, 'index'])->name('presensi');
 
     Route::get('/qrcode-scanner', [QrCodeController::class, 'qrCodeScanner'])
     ->name('qrcode.scanner');

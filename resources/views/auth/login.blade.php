@@ -4,11 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
+  {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 </head>
-<body class="flex items-center justify-center min-h-screen bg-gray-900 text-gray-100">
+<body class="bg-[#F1F5FF] min-h-screen bg-login bg-no-repeat bg-left-bottom pl-16 pr-[112px]">
+  <nav class=" py-8">
+    <div class="flex items-center">
+      <img src="{{ asset('img/logo_pesawaran.png') }}" alt="">
+      <div>
+        <h1 class="font-poppins text-[45px] font-semibold">SiAbsen</h1>
+        <h2 class="font-poppins text-[25px] font-light">Sistem Absensi Desa Baturaja</h2>
+      </div>
+    </div>
+  </nav>
 
-  <!-- Login Card -->
+  <form class="bg-[#FFB524] px-16 pt-20 pb-24 w-[630px] rounded-3xl font-poppins ml-auto drop-shadow-custom" action="{{ route('login') }}" method="POST">
+    @csrf
+    <h1 class="font-medium text-[45px] text-center">Login</h1>
+    <div>
+      <input placeholder="Email" class="w-full rounded-full py-3 text-[25px] px-[20px] mt-[77px]" type="text" name="email" id="">
+    </div>
+    <div>
+      <input placeholder="Password" class="w-full rounded-full py-3 text-[25px] px-[20px] mt-[46px]" type="password" name="password">
+    </div>
+
+    <div>
+      <button class="mt-[140px] text-[30px] font-medium bg-[#010C4A] text-white w-full rounded-full" type="submit">Login</button>
+    </div>
+  </form>
+  {{-- <!-- Login Card -->
   <div class="w-full max-w-md bg-gray-800 rounded-lg shadow-lg p-6">
     <h2 class="text-2xl font-bold text-center">Login</h2>
     <p class="text-sm text-center text-gray-400 mt-1">
@@ -57,7 +85,7 @@
         </button>
       </div>
     </form>
-  </div>
+  </div> --}}
 
 </body>
 </html>

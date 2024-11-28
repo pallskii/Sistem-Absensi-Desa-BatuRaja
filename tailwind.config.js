@@ -14,6 +14,15 @@ export default {
         extend: {
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
+                poppins: ["Poppins", ...defaultTheme.fontFamily.sans],
+            },
+
+            dropShadow: {
+                custom: "15px 10px 10px rgba(0,0,0,0.25)",
+            },
+
+            backgroundImage: {
+                login: "url('../../public/img/bg_logins.png')",
             },
         },
     },
