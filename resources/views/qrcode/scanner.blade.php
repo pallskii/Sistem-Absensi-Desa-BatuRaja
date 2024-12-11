@@ -4,22 +4,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scan QR Code</title>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"
+  integrity="sha512-r6rDA7W6ZeQhvl8S7yRVQUKVHdexq+GAlNkNNqVC7YyIV+NwqCTJe2hDWCiffTyRNOeGEzRRJ9ifvRm/HCzGYg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"></script>
+  @vite(['resources/css/app.css', 'resources/js/app.js'])
   <link rel="stylesheet" href="{{ str_replace('http://', 'https://', Vite::asset('resources/css/app.css')) }}">
   <script type="module" src="{{ str_replace('http://', 'https://', Vite::asset('resources/js/app.js')) }}"></script>
   <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
-<body class="bg-gray-900 text-gray-100">
+<body class="bg-[#F1F5FF] font-poppins">
 
-  <header class="bg-gray-800 shadow">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold text-indigo-500">
-        Sistem Absensi
+  <nav class="py-7 pl-[0px] sm:pl-7 pr-[0px] md:pr-[30px] lg:pr-[111px] bg-[#010C4A] text-white flex flex-col min-[500px]:flex-row justify-between items-center">
+    <div class="flex items-center">
+      <img src="{{ asset('img/logo_pesawaran.png') }}" alt="">
+      <div>
+        <h1 class="font-poppins text-[45px] font-semibold">SiAbsen</h1>
+        <h2 class="font-poppins text-[25px] font-light">Sistem Absensi Desa Baturaja</h2>
       </div>
-      <nav>
-        <a href="/logout" class="text-gray-300 hover:text-white">Logout</a>
-      </nav>
     </div>
-  </header>
+    <div class="flex flex-wrap justify-end gap-6 mt-4 min-[500px]:mt-0 text-[#010C4A]">
+      @if (Auth::user()->role == 'admin')
+      <h1 class="text-[20px] font-semibold rounded-full px-5 py-2 bg-[#FFB524]"><a href="/admin">Admin</a></h1>
+      @endif
+      <h1 class="text-[20px] font-semibold rounded-full px-5 py-2 bg-[#FFB524]"><a href="{{ route('beranda') }}">Beranda</a></h1>
+      <h1 class="text-[20px] font-semibold rounded-full px-5 py-2 bg-[#FFB524]"><a href="{{ route('logout') }}">Logout</a></h1>
+    </div>
+  </nav>
 
   <main class="container mx-auto px-6 py-10">
     <h1 class="text-3xl font-bold text-center mb-8">Scan QR Code</h1>
@@ -31,12 +43,9 @@
     </div>
   </main>
 
-  <footer class="bg-gray-800 py-6 mt-10">
-    <div class="container mx-auto text-center">
-      <p class="text-gray-400">&copy; 2024 Sistem Absensi Desa. Semua Hak Dilindungi.</p>
-    </div>
+  <footer class="bg-[#010C4A]">
+    <h3 class="font-medium text-[15px] text-center text-white py-[60px] mt-[150px] sm:mt-[250px]">© 2024 Sistem Absensi Desa. Semua Hak Dilindungi.</h3>
   </footer>
-
   <script>
     // Ambil CSRF token
     const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
