@@ -40,7 +40,13 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi",
-            "@php artisan filament:upgrade"
+            "@php artisan filament:upgrade",
+            "@php artisan filament:assets",
+            "php artisan storage:link",
+            "php artisan config:clear",
+            "php artisan cache:clear",
+            "php artisan route:clear",
+            "php artisan view:clear"
         ],
         "post-update-cmd": [
             "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
@@ -51,7 +57,6 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
-            "@php artisan filament:upgrade",
             "@php artisan migrate --graceful --ansi"
         ],
         "dev": [
