@@ -13,16 +13,16 @@
     <div class="flex items-center">
       <img src="{{ asset('img/logo_pesawaran.png') }}" alt="">
       <div>
-        <h1 class="font-poppins text-[45px] font-semibold">SiAbsen</h1>
-        <h2 class="font-poppins text-[25px] font-light">Sistem Absensi Desa Baturaja</h2>
+        <h1 class="font-poppins text-[35px] sm:text-[45px] font-semibold">SiAbsen</h1>
+        <h2 class="font-poppins text-[20px] sm:text-[25px] font-light">Sistem Absensi Desa Baturaja</h2>
       </div>
     </div>
     <div class="flex flex-wrap justify-end gap-6 mt-4 min-[500px]:mt-0 text-[#010C4A]">
       @if (Auth::user()->role == 'admin')
-      <h1 class="text-[20px] font-semibold rounded-full px-5 py-2 bg-[#FFB524]"><a href="/admin">Admin</a></h1>
+      <h1 class="text-[16px] lg:text-[20px] font-semibold rounded-full px-5 py-2 bg-[#FFB524]"><a href="/admin">Admin</a></h1>
       @endif
-      <h1 class="text-[20px] font-semibold rounded-full px-5 py-2 bg-[#FFB524]"><a href="{{ route('beranda') }}">Beranda</a></h1>
-      <h1 class="text-[20px] font-semibold rounded-full px-5 py-2 bg-[#FFB524]"><a href="{{ route('logout') }}">Logout</a></h1>
+      <h1 class="text-[16px] lg:text-[20px] font-semibold rounded-full px-5 py-2 bg-[#FFB524]"><a href="{{ route('beranda') }}">Beranda</a></h1>
+      <h1 class="text-[16px] lg:text-[20px] font-semibold rounded-full px-5 py-2 bg-[#FFB524]"><a href="{{ route('logout') }}">Logout</a></h1>
     </div>
   </nav>
 
