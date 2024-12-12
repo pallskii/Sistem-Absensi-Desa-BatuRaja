@@ -21,5 +21,50 @@ class DatabaseSeeder extends Seeder
                 'password' => bcrypt('password'),
                 'role' => 'admin'
             ]);
+
+        User::insert([
+            [
+                'name' => 'User1',
+                'email' => 'user1@gmail.com',
+                'password' => bcrypt('password'),
+                'role' => 'user'
+            ],
+            [
+                'name' => 'User2',
+                'email' => 'user2@gmail.com',
+                'password' => bcrypt('password'),
+                'role' => 'user'
+            ],
+            [
+                'name' => 'User3',
+                'email' => 'user3@gmail.com',
+                'password' => bcrypt('password'),
+                'role' => 'user'
+            ],
+            [
+                'name' => 'User4',
+                'email' => 'user4@gmail.com',
+                'password' => bcrypt('password'),
+                'role' => 'user'
+            ],
+            [
+                'name' => 'User5',
+                'email' => 'user5@gmail.com',
+                'password' => bcrypt('password'),
+                'role' => 'user'
+            ],
+            [
+                'name' => 'User6',
+                'email' => 'user6@gmail.com',
+                'password' => bcrypt('password'),
+                'role' => 'user'
+            ],
+            [
+                'name' => 'User7',
+                'email' => 'user7@gmail.com',
+                'password' => bcrypt('password'),
+                'role' => 'user'
+            ]
+            ]);
     }
 }
