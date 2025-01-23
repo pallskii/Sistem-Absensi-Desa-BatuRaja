@@ -19,6 +19,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $this->app['request']->server->set('HTTPS', true);
+        // Enable HTTPS only in production and not local development
+        if ($this->app->environment("production") && !app()->isLocal()) {
+            $this->app["request"]->server->set("HTTPS", true);
+        }
     }
 }
