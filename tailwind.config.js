@@ -22,7 +22,7 @@ export default {
             },
 
             backgroundImage: {
-                login: "url('https://sistem-absensi-desa-baturaja-production.up.railway.app/img/bg_logins.png')",
+                login: "url('https://sistem-absensi-desa-Mengandungsari-production.up.railway.app/img/bg_logins.png')",
             },
         },
     },

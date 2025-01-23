@@ -16,55 +16,83 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::create([
-                'name' => 'Admin',
-                'email' => 'admin@gmail.com',
-                'password' => bcrypt('password'),
-                'role' => 'admin'
-            ]);
+            "name" => "Admin",
+            "email" => "admin@gmail.com",
+            "password" => bcrypt("admin123"),
+            "role" => "admin",
+        ]);
 
         User::insert([
             [
-                'name' => 'User1',
-                'email' => 'user1@gmail.com',
-                'password' => bcrypt('password'),
-                'role' => 'user'
+                "name" => "AHMAD.S.Sos",
+                "email" => "ahmad.s.sos@gmail.com",
+                "password" => bcrypt("ahmad123"),
             ],
             [
-                'name' => 'User2',
-                'email' => 'user2@gmail.com',
-                'password' => bcrypt('password'),
-                'role' => 'user'
+                "name" => "HANDOKO NUGROHO",
+                "email" => "handoko.nugroho@gmail.com",
+                "password" => bcrypt("handoko123"),
             ],
             [
-                'name' => 'User3',
-                'email' => 'user3@gmail.com',
-                'password' => bcrypt('password'),
-                'role' => 'user'
+                "name" => "BUDI SETIO PURNOMO",
+                "email" => "budi.setio@gmail.com",
+                "password" => bcrypt("budi123"),
             ],
             [
-                'name' => 'User4',
-                'email' => 'user4@gmail.com',
-                'password' => bcrypt('password'),
-                'role' => 'user'
+                "name" => "WAHYONO",
+                "email" => "wahyono@gmail.com",
+                "password" => bcrypt("wahyono123"),
             ],
             [
-                'name' => 'User5',
-                'email' => 'user5@gmail.com',
-                'password' => bcrypt('password'),
-                'role' => 'user'
+                "name" => "RUSDI SANJAYA",
+                "email" => "rusdi.sanjaya@gmail.com",
+                "password" => bcrypt("rusdi123"),
             ],
             [
-                'name' => 'User6',
-                'email' => 'user6@gmail.com',
-                'password' => bcrypt('password'),
-                'role' => 'user'
+                "name" => "NURUL HIDAYATI",
+                "email" => "nurul.hidayati@gmail.com",
+                "password" => bcrypt("nurul123"),
             ],
             [
-                'name' => 'User7',
-                'email' => 'user7@gmail.com',
-                'password' => bcrypt('password'),
-                'role' => 'user'
-            ]
-            ]);
+                "name" => "AZIS ISMANTO",
+                "email" => "azis.ismanto@gmail.com",
+                "password" => bcrypt("azis123"),
+            ],
+            [
+                "name" => "ABDUL KARIM",
+                "email" => "abdul.karim@gmail.com",
+                "password" => bcrypt("abdul123"),
+            ],
+            [
+                "name" => "HANUT WAHONO",
+                "email" => "hanut.wahono@gmail.com",
+                "password" => bcrypt("hanut123"),
+            ],
+            [
+                "name" => "ANDITIA",
+                "email" => "anditia@gmail.com",
+                "password" => bcrypt("anditia123"),
+            ],
+            [
+                "name" => "HERU PURNOMO",
+                "email" => "heru.purnomo@gmail.com",
+                "password" => bcrypt("heru123"),
+            ],
+            [
+                "name" => "AHMAD ZAKARIA",
+                "email" => "ahmad.zakaria@gmail.com",
+                "password" => bcrypt("zaka123"),
+            ],
+            [
+                "name" => "TUMIN",
+                "email" => "tumin@gmail.com",
+                "password" => bcrypt("tumin123"),
+            ],
+            [
+                "name" => "WAHYUDI",
+                "email" => "wahyudi@gmail.com",
+                "password" => bcrypt("wahyudi123"),
+            ],
+        ]);
     }
 }

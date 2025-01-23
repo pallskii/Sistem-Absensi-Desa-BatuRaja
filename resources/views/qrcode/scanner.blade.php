@@ -18,10 +18,10 @@
 
   <nav class="py-7 pl-[0px] sm:pl-7 pr-[0px] md:pr-[30px] lg:pr-[111px] bg-[#010C4A] text-white flex flex-col min-[500px]:flex-row justify-between items-center">
     <div class="flex items-center">
-      <img src="{{ asset('img/logo_pesawaran.png') }}" alt="">
+      <img class= "w-20 mx-2" src="{{ asset('img/logo.png') }}" alt="">
       <div>
         <h1 class="font-poppins text-[35px] sm:text-[45px] font-semibold">SiAbsen</h1>
-        <h2 class="font-poppins text-[20px] sm:text-[25px] font-light">Sistem Absensi Desa Baturaja</h2>
+        <h2 class="font-poppins text-[20px] sm:text-[25px] font-light">Sistem Absensi Desa Mengandungsari</h2>
       </div>
     </div>
     <div class="flex flex-wrap justify-end gap-6 mt-4 min-[500px]:mt-0 text-[#010C4A]">
@@ -62,9 +62,9 @@
       (decodedText, decodedResult) => {
         console.log("Scanned QR Code:", decodedText);
         document.getElementById("result-message").textContent = `QR Code ditemukan: ${decodedText}`;
-        
+
         // Kirim data ke backend untuk validasi
-        fetch('https://sistem-absensi-desa-baturaja-production.up.railway.app/qrcode-validasi', {
+        fetch('https://sistem-absensi-desa-Mengandungsari-production.up.railway.app/qrcode-validasi', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
