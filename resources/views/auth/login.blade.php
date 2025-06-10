@@ -15,10 +15,10 @@
 <body class="bg-[#F1F5FF] min-h-screen bg-login bg-no-repeat bg-left-bottom lg:pl-16 lg:pr-[112px]">
   <nav class="py-8">
     <div class="flex items-center">
-      <img class= "w-20 mx-2" src="{{ asset('img/logo.png') }}" alt="">
+      <img class= "w-20 mx-2" src="{{ asset('img/PLNE_LOGO.png') }}" alt="">
       <div>
         <h1 class="font-poppins text-[35px] sm:text-[45px] font-semibold">SiAbsen</h1>
-        <h2 class="font-poppins text-[20px] sm:text-[25px] font-light">Sistem Absensi Desa Mengandungsari</h2>
+        <h2 class="font-poppins text-[20px] sm:text-[25px] font-light">Sistem Absensi PLNE Enjiniring</h2>
       </div>
     </div>
   </nav>

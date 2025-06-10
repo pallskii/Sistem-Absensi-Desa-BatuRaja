@@ -8,5 +8,5 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    base: "https://sistem-absensi-desa-Mengandungsari-production.up.railway.app/",
+   // base: "mengandungsari.my.id/",
 });

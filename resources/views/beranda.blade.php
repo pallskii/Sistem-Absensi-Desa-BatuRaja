@@ -11,10 +11,10 @@
 <body class="bg-[#F1F5FF] font-poppins">
    <nav class="py-7 pl-[0px] sm:pl-7 pr-[0px] md:pr-[30px] lg:pr-[111px] bg-[#010C4A] text-white flex flex-col min-[500px]:flex-row justify-between items-center">
     <div class="flex items-center">
-      <img class= "w-20 mx-2" src="{{ asset('img/logo.png') }}" alt="">
+      <img class= "w-20 mx-2" src="{{ asset('img/PLNE_LOGO.png') }}" alt="">
       <div>
         <h1 class="font-poppins text-[35px] sm:text-[45px] font-semibold">SiAbsen</h1>
-        <h2 class="font-poppins text-[20px] sm:text-[25px] font-light">Sistem Absensi Desa Mengandungsari</h2>
+        <h2 class="font-poppins text-[20px] sm:text-[25px] font-light">Sistem Absensi PLN Enjiniring</h2>
       </div>
     </div>
     <div class="flex flex-wrap justify-end gap-6 mt-4 min-[500px]:mt-0 text-[#010C4A]">
@@ -45,7 +45,7 @@
   </div>
 
   <footer class="bg-[#010C4A]">
-    <h3 class="font-medium text-[15px] text-center text-white py-[60px] mt-[150px] sm:mt-[250px]">© 2024 Sistem Absensi Desa. Semua Hak Dilindungi.</h3>
+    <h3 class="font-medium text-[15px] text-center text-white py-[60px] mt-[150px] sm:mt-[250px]">© 2025 Sistem PLN Enjiniring. Semua Hak Dilindungi.</h3>
   </footer>
 </body>
 </html>
